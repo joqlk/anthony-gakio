@@ -1,0 +1,496 @@
+:root {
+  --paper: #f6f3ec;
+  --ink: #121212;
+  --muted: #4a4a4a;
+  --rule: #121212;
+  --hairline: rgba(18, 18, 18, 0.22);
+  --link: #326891;
+  --red: #c41230;
+  --measure: 1180px;
+  --nav-offset: 3.2rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  font-optical-sizing: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover { color: var(--link); }
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.4rem 0.7rem;
+  z-index: 5;
+}
+
+.skip:focus { top: 0.5rem; color: var(--paper); }
+
+.wrap {
+  width: min(var(--measure), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.masthead {
+  padding-top: 0.85rem;
+  background: var(--paper);
+}
+
+.edition-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--ink);
+  font-family: "Libre Franklin", "Franklin Gothic Medium", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nameplate {
+  margin: 0.35rem 0 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: clamp(3.4rem, 9vw, 6.6rem);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 0.28rem;
+}
+
+.motto {
+  margin: 0.45rem 0 0;
+  text-align: center;
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  padding-inline: 0.75rem;
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0;
+  margin-top: 0.7rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 4px double var(--ink);
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background: var(--paper);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.front,
+.band {
+  scroll-margin-top: var(--nav-offset);
+}
+
+.sections a {
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+}
+
+.sections a[aria-current="true"] {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-underline-offset: 0.35em;
+}
+
+.kicker {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.front { padding-top: 1.6rem; }
+
+.headline {
+  margin: 0;
+  max-width: 18ch;
+  font-weight: 560;
+  font-size: clamp(2.4rem, 5vw, 4.15rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+
+.deck {
+  margin: 0.8rem 0 0;
+  max-width: 46rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.lead {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 1.6rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink);
+}
+
+.portrait { margin: 0; }
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) contrast(1.05);
+  border: 1px solid var(--ink);
+}
+
+.portrait figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.cap-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.essay {
+  columns: 2;
+  column-gap: 1.5rem;
+  column-rule: 1px solid var(--hairline);
+}
+
+.essay p { margin: 0 0 0.85rem; }
+
+.essay p:first-of-type::first-letter {
+  float: left;
+  padding: 0.08em 0.08em 0 0;
+  font-size: 4.6rem;
+  line-height: 0.75;
+  font-weight: 560;
+}
+
+.pull {
+  margin: 0.4rem 0 1rem !important;
+  padding: 0.15rem 0 0.15rem 0.8rem;
+  border-left: 3px solid var(--red);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.25;
+  break-inside: avoid;
+}
+
+.byline {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 0 0;
+  border-top: 4px double var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.index li {
+  padding: 0 1.1rem 0.9rem 0;
+  margin-right: 1.1rem;
+  border-right: 1px solid var(--hairline);
+}
+
+.index li:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.index p { margin: 0; font-size: 1.02rem; }
+
+.band {
+  padding-top: 2.2rem;
+}
+
+.band-head {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.band-head h2 {
+  margin: 0 0 0.35rem;
+  font-weight: 560;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.columns { display: grid; gap: 0 1.5rem; }
+
+.columns-3 { grid-template-columns: repeat(3, 1fr); }
+
+.columns-2 { grid-template-columns: 1.35fr 1fr; }
+
+.columns article {
+  padding-bottom: 0.4rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 0.8rem;
+}
+
+.columns-3 article + article,
+.columns-2 article + article {
+  border-left: 1px solid var(--hairline);
+  padding-left: 1.4rem;
+  border-top: 0;
+  padding-top: 0;
+}
+
+.dateline {
+  margin: 0 0 0.35rem;
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.columns h3,
+.record h3 {
+  margin: 0 0 0.35rem;
+  font-weight: 560;
+  font-size: 1.55rem;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.columns h3 a { text-decoration: none; }
+
+.columns h3 a:hover { text-decoration: underline; }
+
+.subhead {
+  margin: 0 0 0.55rem;
+  font-style: italic;
+  font-size: 1.08rem;
+}
+
+.columns p { margin: 0 0 0.7rem; }
+
+.code {
+  font-family: "Libre Franklin", ui-monospace, monospace;
+  font-size: 0.92em;
+  font-style: normal;
+}
+
+.more {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.more a { color: var(--link); }
+
+.record {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.record li {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.record li:last-child { border-bottom: 1px solid var(--hairline); }
+
+.when {
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.35rem;
+}
+
+.record p { margin: 0; color: var(--muted); }
+
+.record-more { margin-top: 1rem; }
+
+.colophon {
+  margin-top: 2.6rem;
+  padding: 1.2rem 0 2rem;
+  border-top: 4px double var(--ink);
+}
+
+.nameplate-small {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  text-align: left;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  list-style: none;
+  margin: 0.6rem 0;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-family: "Libre Franklin", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contacts a { text-decoration: none; }
+
+.contacts a:hover { text-decoration: underline; }
+
+.impressum {
+  margin: 0.7rem 0 0;
+  max-width: 42rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Laptop: keep the columns, give the essay one measure beside the portrait. */
+@media (max-width: 1180px) {
+  .essay { columns: 1; }
+  .lead { grid-template-columns: minmax(200px, 260px) 1fr; }
+  .deck { font-size: 1.2rem; }
+  .columns h3,
+  .record h3 { font-size: 1.35rem; }
+}
+
+/* Tablet landscape: three stories become two, then the third on its own row. */
+@media (max-width: 980px) {
+  .columns-3 { grid-template-columns: 1fr 1fr; }
+  .columns-3 article:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .columns-3 article:nth-child(n + 3) {
+    grid-column: 1 / -1;
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--hairline);
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  .columns-2 { grid-template-columns: 1fr 1fr; }
+  .record li { grid-template-columns: 9.5rem 1fr; }
+  .index li { margin-right: 0.8rem; padding-right: 0.8rem; }
+}
+
+/* Tablet portrait: one column, portrait above the story, rules go horizontal. */
+@media (max-width: 760px) {
+  .lead,
+  .index,
+  .columns-3,
+  .columns-2,
+  .record li {
+    grid-template-columns: 1fr;
+  }
+  .portrait { max-width: 28rem; }
+  .headline { max-width: none; }
+  .index li,
+  .columns article + article {
+    border-left: 0;
+    border-right: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    grid-column: auto;
+    border-top: 1px solid var(--hairline);
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+  }
+  .edition-line {
+    justify-content: center;
+    text-align: center;
+  }
+  .edition-line span:first-child,
+  .edition-line span:last-child { display: none; }
+  .motto { letter-spacing: 0.06em; font-size: 0.66rem; }
+  .sections { letter-spacing: 0.08em; }
+  .sections a { padding: 0.45rem 0.55rem; }
+}
+
+/* Phone: tighter measure, smaller drop cap, nav that stays on one line. */
+@media (max-width: 520px) {
+  .wrap { width: min(var(--measure), calc(100% - 1.25rem)); }
+  body { font-size: 1.05rem; }
+  .nameplate { font-size: clamp(2.6rem, 14vw, 3.6rem); }
+  .sections {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    justify-content: space-between;
+  }
+  .sections a { padding: 0.5rem 0.15rem; }
+  .essay p:first-of-type::first-letter { font-size: 3.4rem; }
+  .pull { font-size: 1.15rem; }
+  .deck { font-size: 1.08rem; }
+  .portrait { max-width: none; }
+}
+
+@media (max-width: 380px) {
+  .sections { flex-wrap: wrap; justify-content: center; row-gap: 0; }
+}
+
+@media print {
+  .masthead { position: static; }
+  .skip { display: none; }
+  a { text-decoration: none; }
+  body { background: white; }
+}

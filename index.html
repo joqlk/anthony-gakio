@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Gakio — Full stack, Angular &amp; AI</title>
+  <meta name="description" content="Anthony Gakio, a Nairobi full-stack engineer working across Angular, artificial intelligence, and community.">
+  <meta property="og:title" content="Anthony Gakio">
+  <meta property="og:description" content="Full-stack engineering, Angular and artificial intelligence, and the communities around them.">
+  <meta property="og:image" content="assets/portrait.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,560&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#front">Skip to the front page</a>
+
+  <header class="masthead">
+    <div class="wrap">
+      <p class="edition-line">
+        <span>Nairobi</span>
+        <span class="edition-date">Thursday, September 24, 2026</span>
+        <span>Vol. I · No. 1</span>
+      </p>
+      <h1 class="nameplate">Anthony Gakio</h1>
+      <p class="motto">Full stack · Angular &amp; artificial intelligence · Community</p>
+      <nav class="sections" aria-label="Edition">
+        <a href="#front">Front</a>
+        <a href="#talks">Talks</a>
+        <a href="#writing">Writing</a>
+        <a href="#record">The Record</a>
+        <a href="#work">Notebook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="wrap front" id="front">
+      <p class="kicker">The front page</p>
+      <h2 class="headline">An interface should know where its answers came from.</h2>
+      <p class="deck">Anthony Gakio builds the whole application, from the Angular interface through to the services behind it, and spends the rest of his time in rooms where other developers are learning to do the same.</p>
+
+      <div class="lead">
+        <figure class="portrait">
+          <img src="assets/portrait.jpg" alt="Black-and-white close portrait of Anthony Gakio, smiling, in a suit and patterned tie.">
+          <figcaption>
+            <span class="cap-label">Portrait</span>
+            Anthony Gakio, Nairobi. The photograph is the one he asked to run.
+          </figcaption>
+        </figure>
+
+        <div class="essay">
+          <p>Nairobi — The forms came first. Then the models. Then the server that has to hold both. The work runs the full stack: the interface, the services and data behind it, the intelligence on top, and the community that has to keep all of it understandable.</p>
+          <p>I studied information technology at the University of Embu. On campus I led artificial intelligence, and then Android, for the Google Developer Student Clubs chapter. I spent a year as a technical ambassador for the DFINITY Foundation, and a season as an attaché at the Embu Law Courts, under the Judiciary’s Office of the Chief Justice. I now look after the public voice of Angular Kenya, and of Friends of Figma Nairobi.</p>
+          <p>Two talks are on the record. In March 2026, at Google’s office in Nairobi, I walked a room through retrieval-augmented generation inside an Angular application: how a screen asks a question, fetches the passages that can support an answer, and refuses to invent the rest. In May, at iHub for Angular Konnekt, I gave a gentle introduction to Signal Forms — four steps from a data model to a field tree, and a way out of the older tangle of streams.</p>
+          <p>On campus I taught the first afternoon of Android the way I wish I had been taught it, in Kotlin and Jetpack Compose. The writing follows the same line. A tutorial on form signals, published with Angular Kenya. A DEV essay about Hacktoberfest that is mostly a confession about merge conflicts.</p>
+          <p class="pull">“Changing the world one console.log() at a time.”</p>
+          <p>What I want the work to do is plain. An interface should be able to show its sources. A room full of developers should leave able to build the thing they just watched.</p>
+          <p class="byline">By Gakio</p>
+        </div>
+      </div>
+
+      <ul class="index" aria-label="In this edition">
+        <li>
+          <span class="kicker">Angular × AI</span>
+          <p>Retrieval in the interface, and agents that cite the policy they summarize.</p>
+        </li>
+        <li>
+          <span class="kicker">Full stack</span>
+          <p>Angular and TypeScript on the screen. APIs, data, and the services that have to answer them.</p>
+        </li>
+        <li>
+          <span class="kicker">Community</span>
+          <p>Angular Kenya and Friends of Figma Nairobi, plus the campus rooms that came before.</p>
+        </li>
+      </ul>
+    </article>
+
+    <section class="wrap band" id="talks" aria-labelledby="talks-title">
+      <header class="band-head">
+        <p class="kicker">Dispatches</p>
+        <h2 id="talks-title">The talks</h2>
+      </header>
+      <div class="columns columns-3">
+        <article>
+          <p class="dateline">March 27, 2026 · Google, Nairobi</p>
+          <h3><a href="https://github.com/Gak1o/bwai26" target="_blank" rel="noopener">Build with AI with Angular</a></h3>
+          <p class="subhead">Implementing RAG in your Angular applications</p>
+          <p>A facilitator’s session with Angular Kenya. The day also took in Vertex AI, Genkit, Gemini, and Firebase — the machinery around a model that has to answer from something it can point to.</p>
+        </article>
+        <article>
+          <p class="dateline">May 30, 2026 · iHub, Nairobi</p>
+          <h3><a href="https://github.com/Gak1o/Angular-konnect26" target="_blank" rel="noopener">Angular Konnekt 2026</a></h3>
+          <p class="subhead">A gentle introduction to Signal Forms</p>
+          <p>Four steps, and a thinner form. A data model held in a signal, a field tree from <span class="code">form()</span>, a template bound with the field directive, and state read the way the rest of Angular now reads state.</p>
+          <p class="more"><a href="https://x.com/angular_kenya/status/2074413538215428365" target="_blank" rel="noopener">The tutorial that followed →</a></p>
+        </article>
+        <article>
+          <p class="dateline">Campus · University of Embu</p>
+          <h3>Getting started with Android</h3>
+          <p class="subhead">Kotlin and Jetpack Compose</p>
+          <p>From the years as Android lead for Google Developer Student Clubs. A first afternoon on the modern Android stack: Kotlin for the language, Compose for the screen, and a path that does not begin in a decade-old tutorial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap band" id="writing" aria-labelledby="writing-title">
+      <header class="band-head">
+        <p class="kicker">Published</p>
+        <h2 id="writing-title">The writing</h2>
+      </header>
+      <div class="columns columns-2">
+        <article class="feature-story">
+          <p class="dateline">July 7, 2026 · Angular Kenya</p>
+          <h3><a href="https://x.com/angular_kenya/status/2074413538215428365" target="_blank" rel="noopener">Angular Form Signals — A Tutorial</a></h3>
+          <p>Signal Forms keep the model in a signal and let the field tree follow it. The piece walks the reasons they exist — one reactive model, less boilerplate, stricter types, validation that notices when a sibling field changes — and then the steps: <span class="code">signal()</span>, <span class="code">form()</span>, <span class="code">[formField]</span>, <span class="code">value()</span>, <span class="code">set()</span>.</p>
+          <p class="more"><a href="https://x.com/angular_kenya/status/2074413538215428365" target="_blank" rel="noopener">Read on X →</a></p>
+        </article>
+        <article>
+          <p class="dateline">October 26, 2024 · DEV</p>
+          <h3><a href="https://dev.to/gak1o/hacktoberfest-2024-a-comedy-of-prs-or-how-i-learned-to-stop-worrying-and-love-the-merge-conflicts-2nhc" target="_blank" rel="noopener">Hacktoberfest 2024: A Comedy of PRs</a></h3>
+          <p class="subhead">Or: How I Learned to Stop Worrying and Love the Merge Conflicts</p>
+          <p>A letter to future employers. The resemblance to actual git disasters is, the piece insists, purely coincidental. Force-push is not the answer. Force-with-lease might be. The “S” in HTTPS stands for suffering.</p>
+          <p class="more"><a href="https://dev.to/gak1o" target="_blank" rel="noopener">dev.to/gak1o →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap band" id="record" aria-labelledby="record-title">
+      <header class="band-head">
+        <p class="kicker">Appointments</p>
+        <h2 id="record-title">The record</h2>
+      </header>
+      <ol class="record">
+        <li>
+          <span class="when">Aug. 2024 — present</span>
+          <div>
+            <h3>Social media manager, Angular Kenya</h3>
+            <p>The community’s public voice. Nairobi. Still the desk I write from when the framework ships something worth explaining.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Nov. 2024 — present</span>
+          <div>
+            <h3>Social media manager, Friends of Figma Nairobi</h3>
+            <p>The same work on the design side of the room: events, the people who show up, and a record of what was said.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Sep. 2024 — Sep. 2025</span>
+          <div>
+            <h3>Technical ambassador, DFINITY Foundation</h3>
+            <p>University of Embu. A year of explaining the Internet Computer to a campus that was still deciding what to build on.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">May 2025 — Sep. 2025</span>
+          <div>
+            <h3>Attaché, Judiciary — Office of the Chief Justice</h3>
+            <p>Embu Law Courts. A short posting outside the editor’s usual beat, inside the institution that keeps the public record.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Apr. 2024 — Sep. 2025</span>
+          <div>
+            <h3>Android lead, Google Developer Student Clubs</h3>
+            <p>University of Embu. Kotlin, Jetpack Compose, and the sessions that got a chapter from “hello” to a screen that composed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">Sep. 2023 — Apr. 2024</span>
+          <div>
+            <h3>AI lead, Google Developer Student Clubs</h3>
+            <p>University of Embu. The first appointment: models, before the framework, before the phone.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2022 — 2026</span>
+          <div>
+            <h3>B.Sc. Information Technology, University of Embu</h3>
+            <p>The degree under the rest of it.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="more record-more"><a href="https://ke.linkedin.com/in/anthony-gakio-941b8336b" target="_blank" rel="noopener">The full record, on LinkedIn →</a></p>
+    </section>
+
+    <section class="wrap band" id="work" aria-labelledby="work-title">
+      <header class="band-head">
+        <p class="kicker">Selected</p>
+        <h2 id="work-title">From the notebook</h2>
+      </header>
+      <div class="columns columns-3">
+        <article>
+          <p class="dateline">Agents</p>
+          <h3><a href="https://github.com/Gak1o/The_Kanuni_Mfumo_Scout" target="_blank" rel="noopener">The Kanuni Mfumo Scout</a></h3>
+          <p>A multi-agent reader of county policy, budgets, and services. The point is a short summary a citizen can use, with the citation still attached.</p>
+        </article>
+        <article>
+          <p class="dateline">Angular · Firebase</p>
+          <h3><a href="https://github.com/Gak1o/schwrzitter" target="_blank" rel="noopener">Schwarzwitter</a></h3>
+          <p>A small Twitter-shaped application. The exercise was the ordinary one: accounts, posts, and a timeline that has to feel immediate.</p>
+        </article>
+        <article>
+          <p class="dateline">Full stack</p>
+          <h3><a href="https://github.com/Gak1o/lost-and-found" target="_blank" rel="noopener">Lost &amp; Found</a></h3>
+          <p>Report a loss, register a find, make a claim. A management system built around the unglamorous moment when something is missing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <p class="nameplate nameplate-small">Anthony Gakio</p>
+      <ul class="contacts">
+        <li><a href="https://github.com/Gak1o" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://dev.to/gak1o" target="_blank" rel="noopener">DEV</a></li>
+        <li><a href="https://x.com/gakiotoni" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://ke.linkedin.com/in/anthony-gakio-941b8336b" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/angular_kenya" target="_blank" rel="noopener">Angular Kenya</a></li>
+      </ul>
+      <p class="impressum">Set in Newsreader and Libre Franklin. Nairobi edition, September 24, 2026. An account drawn from public talks, writing, and roles. Corrections via LinkedIn.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
